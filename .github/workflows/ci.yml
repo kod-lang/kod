@@ -1,0 +1,53 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Building Kod Library
+      run: ${{ github.workspace }}/build-lib.sh
+
+    - name: Building
+      run: ${{ github.workspace }}/build.sh
+
+    - name: Testing
+      run: ${{ github.workspace }}/test.sh
+
+  macos:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Building Kod Library
+      run: ${{ github.workspace }}/build-lib.sh
+
+    - name: Building
+      run: ${{ github.workspace }}/build.sh
+
+    - name: Testing
+      run: ${{ github.workspace }}/test.sh
+
+  windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Building Kod Library
+      run: ${{ github.workspace }}\build-lib.bat
+
+    - name: Building
+      run: ${{ github.workspace }}\build.bat
+
+    - name: Testing
+      run: ${{ github.workspace }}\test.bat
