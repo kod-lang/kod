@@ -1,4 +1,6 @@
 
+[![CI](https://github.com/kod-lang/kod/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kod-lang/kod/actions/workflows/ci.yml) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0964de6370d54b9fa3d206177149d65d)](https://app.codacy.com/gh/kod-lang/kod/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 # The Kod Programming Language
 
 Kod is a programming language that is designed to be simple and easy to use. It is a dynamically typed language that is compiled to bytecode and then interpreted by a virtual machine. The language is designed to be easy to learn and use, while still being powerful enough to be used for real-world applications.
